@@ -35,3 +35,15 @@ function b(){
     console.log(x);
 }
 */
+
+/*
+var x = 10;
+function k(){
+var a=10;
+}
+console.log(window.x);
+console.log(a);
+console.log(this.x);
+*/
+
+
