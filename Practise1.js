@@ -101,14 +101,54 @@ console.log(b);
 // }
 // x();
 
-function x(){
-    var a=7;
-    function y(){
-        console.log(a);
-    }
-    a=100;
-    return y;
-}
-let z = x();
-z();
+// function x(){
+//     var a=7;
+//     function y(){
+//         console.log(a);
+//     }
+//     a=100;
+//     return y;
+// }
+// let z = x();
+// z();
 
+
+// SetTimeout function glimpse for more closure understanding
+
+// 1. 
+
+// function x(){
+//     var x =1;
+//     setTimeout(function(){
+//         console.log(x);
+//     },1000)
+// }
+// x();
+
+// 2.
+
+// function x(){
+//     for(let i=1 ; i<=5 ;i++ ){
+//       setTimeout(function(){
+//             console.log(i);
+//         },i * 1000)
+//     }
+//     console.log ("Namaste Javascript")
+// }
+// x();
+
+// 3.
+// function x(){
+
+//     for(var i=1 ; i<=5 ;i++ ){
+//         function close(i){
+
+//             setTimeout(function(){
+//                   console.log(i);
+//               },i * 1000)
+//         }
+//         close(i)
+//     }
+//     console.log ("Namaste Javascript")
+// }
+// x();
