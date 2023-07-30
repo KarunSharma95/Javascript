@@ -57,3 +57,38 @@ function a(){
 a();
 console.log(b);
 */
+
+
+
+// const b = 100;
+// {
+//     var a=10;
+//     let b=20;
+//     const c=30;
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+// console.log(b)
+
+// const b=10;
+// {
+//     const b=20;
+//     {
+//         const b=30;
+//         {
+//             const b=40;
+//         console.log(b);
+//         }
+//     console.log(b);
+//     }
+// console.log(b)
+// }
+// console.log(b);
+
+// let a=10;
+// {
+//     var a=20;
+// }
+// console.log(a)
+
