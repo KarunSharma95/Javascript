@@ -152,3 +152,37 @@ console.log(b);
 //     console.log ("Namaste Javascript")
 // }
 // x();
+
+// 1. Counter
+
+// function outer(){
+//     var count=0;
+//     return function counter(){
+//         console.log(count);
+//         count ++;
+//     }
+// }
+// var outest = outer();
+// outest();
+// outest();
+
+// var outest1 =outer();
+// outest1();
+// outest1();
+
+//2. Counter 2 with constructor function
+
+// function Counter(){
+//     var count = 0;
+//     this.incrementCounter = function(){
+//         count++
+//         console.log(count);
+//     }
+//     this.decrementCounter = function(){
+//         count--
+//         console.log(count);
+//     }
+// }
+// var outest = new Counter();
+// outest.incrementCounter();
+// outest.decrementCounter();
