@@ -152,3 +152,18 @@ console.log(b);
 //     console.log ("Namaste Javascript")
 // }
 // x();
+
+//Btn click count
+
+// document.getElementById('btnClick')
+document.addEventListener('DOMContentLoaded', function () {
+    // Ensure that the DOM content is loaded before trying to access elements.
+    const myButton = document.getElementById('btnClick');
+    let count =0;
+    if (myButton) {
+      // Check if the button element exists before adding the event listener.
+      myButton.addEventListener('click', function () {
+        console.log('Button clicked!',++count);
+      });
+    }
+  });
