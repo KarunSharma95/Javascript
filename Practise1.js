@@ -168,17 +168,18 @@ console.log(b);
 //     }
 //   });
 
-console.log("start");
+// console.log("start");
 
-setTimeout(function xy(){
-console.log("callback");
-},5000);
+// setTimeout(function xy(){
+// console.log("callback");
+// },5000);
 
-console.log("end");
+// console.log("end");
 
-let startDate = new Date().getTime();
-let endDate = startDate;
- while(endDate < startDate + 10000){
-    endDate = new Date().getTime();
- }
- console.log("while expires");
+// let startDate = new Date().getTime();
+// let endDate = startDate;
+//  while(endDate < startDate + 10000){
+//     endDate = new Date().getTime();
+//  }
+//  console.log("while expires");
+
