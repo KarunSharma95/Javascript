@@ -183,3 +183,79 @@ console.log(b);
 //  }
 //  console.log("while expires");
 
+//Higher Order Function
+
+// let radius = [3,1,2,4];
+
+// function calcArea(radiusArr){
+//     const output=[];
+// for (let i=0 ; i<radiusArr.length ; i++){
+//      output.push(Math.PI * radiusArr[i] * radiusArr[i]);
+// }
+// return output;
+// };
+// console.log(calcArea(radius));
+
+// function calcPara(radiusArr){
+//     const output= [];
+// for (let i=0 ; i<radiusArr.length ; i++){
+//     output.push(2 * Math.PI *  radiusArr[i]);
+// }
+// return output;
+// };
+// console.log (calcPara(radius));
+
+// function calcDiameter(radiusArr){
+//     const output = [];
+// for (let i=0 ; i<radiusArr.length ; i++){
+//     output.push(2 * radiusArr[i]);
+// }
+// return output;
+// };
+// console.log(calcDiameter(radius));
+
+// const radius = [3,1,2,4];
+
+// let Area = function(x){
+//     return Math.PI * x * x ;
+// }
+// let Para = function(x){
+//     return  2 * Math.PI * x ;
+// }
+// let Dia = function(x){
+//     return 2 * x;
+// }
+// function Generator (arr, logic){
+//     const out = [];
+//     for (let i=0; i<arr.length ;i++){
+//       out.push(logic(arr[i]));
+//     }
+//     return out;
+// }
+// console.log (Generator(radius,Area));
+// console.log(Generator(radius,Para));
+// console.log(Generator(radius,Dia));
+
+// const radius = [3,1,2,4];
+
+// let Area = function(x){
+//     return Math.PI * x * x ;
+// }
+// let Para = function(x){
+//     return  2 * Math.PI * x ;
+// }
+// let Dia = function(x){
+//     return 2 * x;
+// }
+// Array.prototype.Generator = function(logic){
+//     const out = [];
+//     for (let i=0; i<this.length ;i++){
+//       out.push(logic(this[i]));
+//     }
+//     return out;
+// }
+// console.log (radius.Generator(Area));
+// console.log(radius.Generator(Para));
+// console.log(radius.Generator(Dia));
+
+
