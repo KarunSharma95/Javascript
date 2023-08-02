@@ -155,15 +155,30 @@ console.log(b);
 
 //Btn click count
 
-// document.getElementById('btnClick')
-document.addEventListener('DOMContentLoaded', function () {
-    // Ensure that the DOM content is loaded before trying to access elements.
-    const myButton = document.getElementById('btnClick');
-    let count =0;
-    if (myButton) {
-      // Check if the button element exists before adding the event listener.
-      myButton.addEventListener('click', function () {
-        console.log('Button clicked!',++count);
-      });
-    }
-  });
+// // document.getElementById('btnClick')
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Ensure that the DOM content is loaded before trying to access elements.
+//     const myButton = document.getElementById('btnClick');
+//     let count =0;
+//     if (myButton) {
+//       // Check if the button element exists before adding the event listener.
+//       myButton.addEventListener('click', function () {
+//         console.log('Button clicked!',++count);
+//       });
+//     }
+//   });
+
+console.log("start");
+
+setTimeout(function xy(){
+console.log("callback");
+},5000);
+
+console.log("end");
+
+let startDate = new Date().getTime();
+let endDate = startDate;
+ while(endDate < startDate + 10000){
+    endDate = new Date().getTime();
+ }
+ console.log("while expires");
