@@ -258,4 +258,20 @@ console.log(b);
 // console.log(radius.Generator(Para));
 // console.log(radius.Generator(Dia));
 
+// const arr =[
+//     {first:'Karun', last:'Sharma', Age:27},
+//     {first:'Balraj', last:'Sharma', Age:62},
+//     {first:'Shweta', last:'Sharma', Age:29},
+//     {first:'Usha', last:'Sharma', Age:58}
+// ];
+
+//  const  x = arr.reduce(function(acc,curr){
+ 
+//  if (curr.Age <30){
+//    acc.push (curr.first + ' ' +curr.last)
+//  }
+//  return acc;
+// },[]);
+// console.log(x);
+
 
