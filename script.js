@@ -3,6 +3,12 @@
 const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
 
+function renderError(msg){
+    countriesContainer.insertAdjacentText('beforeend',`Something went wrong 🎆🎆🎆 ${msg}. Try again !`);
+    // countriesContainer.style.opacity=1;
+
+}
+
 // let x = function (name1){
 // const request = new XMLHttpRequest();
 // request.open('GET',`https://restcountries.com/v3.1/name/${name1}`);
@@ -43,7 +49,7 @@ const renderCountry= function (data1){
         </article>
     `;
     countriesContainer.insertAdjacentHTML('beforeend',html);
-    countriesContainer.style.opacity='1';
+    // countriesContainer.style.opacity='1';
 }
 /*
 let x = function (name1){
@@ -106,5 +112,12 @@ function getCountry (country){
     fetch(`https://restcountries.com/v3.1/name/${country}`)
     .then(response=>response.json())
     .then(data=>renderCountry(data[1]))
+    .catch(err =>renderError(err.message))
+    .finally(function(){
+        countriesContainer.style.opacity='1';
+    })
 };
-getCountry('india');
+
+btn.addEventListener('click',function(){
+    getCountry('india');
+});
