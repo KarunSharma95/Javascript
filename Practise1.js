@@ -274,4 +274,44 @@ console.log(b);
 // },[]);
 // console.log(x);
 
+/// Promises
+
+const cart = ["Tshirts","Pants"," Kurtas"];
+const Promise1 = createOrder(cart);
+console.log(Promise1);
+Promise1
+.then(function (orderId){
+console.log(orderId)
+})
+.catch(function (err){
+console.log(err.message);
+});
+
+//Producer
+
+function createOrder(cart){
+
+    const Pr = new Promise(function(resolve, reject){
+
+        if(!validateCart(cart)){
+         const err= new Error("Cart is not validate");
+         reject (err);
+        }
+
+        const orderId = "12345";
+        if(orderId){
+            setTimeout(function(){
+
+                resolve(orderId);
+            },5000)
+        }
+
+    });
+
+    return Pr;
+}
+function validateCart(cart){
+  return true;
+}
+
 
