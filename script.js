@@ -105,7 +105,6 @@ x('india');
 function getCountry (country){
     fetch(`https://restcountries.com/v3.1/name/${country}`)
     .then(response=>response.json())
-    
     .then(data=>renderCountry(data[1]))
 };
 getCountry('india');
