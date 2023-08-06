@@ -4,7 +4,7 @@ const btn = document.querySelector('.btn-country');
 const countriesContainer = document.querySelector('.countries');
 
 function renderError(msg){
-    countriesContainer.insertAdjacentText('beforeend',`Something went wrong 🎆🎆🎆 ${msg}. Try again !`);
+    countriesContainer.insertAdjacentText('beforeend',msg);
     // countriesContainer.style.opacity=1;
 
 }
@@ -112,7 +112,7 @@ function getCountry (country){
     fetch(`https://restcountries.com/v3.1/name/${country}`)
     .then(response=>response.json())
     .then(data=>renderCountry(data[1]))
-    .catch(err =>renderError(err.message))
+    .catch(err =>renderError(`Something went wrong 🎆🎆🎆 ${err.message}. Try again !`))
     .finally(function(){
         countriesContainer.style.opacity='1';
     })
@@ -121,3 +121,4 @@ function getCountry (country){
 btn.addEventListener('click',function(){
     getCountry('india');
 });
+
