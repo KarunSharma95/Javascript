@@ -130,3 +130,49 @@ const getPosition = function (){
   })
 }
 getPosition().then(res => console.log(res));
+
+const  wait = function(seconds){
+  return new Promise(function(resolve,reject){
+     setTimeout(resolve,seconds * 1000);
+  })
+
+}
+
+const imgContainer = document.querySelector('.images');
+
+const createImage = function(imgPath){
+  return new Promise(function(resolve,reject){
+    const img = document.createElement('img');
+    img.src=imgPath;
+
+    img.addEventListener('load',function(){
+      imgContainer.append(img);
+      resolve(img);
+    })
+
+    img.addEventListener('error',function(){
+      reject (new Error('Image not found'));
+    })
+  })
+}
+let currImage;
+ createImage('img/img-1.jpg')
+ .then(res => {
+  currImage = res;
+  console.log('1 st Image loaded successfully');
+  return wait(2);
+})
+.then(()=>{
+  currImage.style.display='none';
+  return createImage('img/img-2.jpg')
+})
+.then(res => {
+  currImage = res;
+  console.log('2 nd Image loaded successfully');
+  return wait(2)
+})
+.then(()=>{
+  currImage.style.display='none';
+})
+ .catch(err => console.error('Image not found'))
+
