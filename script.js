@@ -122,3 +122,11 @@ btn.addEventListener('click',function(){
     getCountry('india');
 });
 
+// Creating Promise
+
+const getPosition = function (){
+  return new Promise(function(resolve, reject){
+    navigator.geolocation.getCurrentPosition(resolve,reject);
+  })
+}
+getPosition().then(res => console.log(res));
